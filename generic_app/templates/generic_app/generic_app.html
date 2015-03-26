@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Generic App</h1>
+    <h2>Hi {{full_name}}, you are logged in!</h2>
+    <p>Click <a href="{% url 'logout' %}">here</a> to log out.</p>
+
+{% endblock %}
