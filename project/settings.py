@@ -1,5 +1,5 @@
 """
-Django settings for ldapauth project.
+Django settings for generic project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 import ldap
 from django_auth_ldap.config import LDAPSearch, GroupOfNamesType
-from ldapauth.get_secrets import get_secrets
+from project.get_secrets import get_secrets
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
@@ -52,9 +52,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'ldapauth.urls'
+ROOT_URLCONF = 'project.urls'
 
-WSGI_APPLICATION = 'ldapauth.wsgi.application'
+WSGI_APPLICATION = 'project.wsgi.application'
 
 # Keep ModelBackend around for per-user permissions and maybe a local
 # superuser.
@@ -91,7 +91,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'ldapauth/templates/'),
+TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'project/templates/'),
                 os.path.join(BASE_DIR, 'accounts/templates/'),
                 os.path.join(BASE_DIR, 'generic_app/templates/'),)
 

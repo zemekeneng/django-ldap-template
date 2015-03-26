@@ -1,4 +1,4 @@
-Django LDAP Auth Template
+Django LDAP Template
 =====
 
 This is a generic setup to connect to an ldap server from a Django project.
